@@ -1,8 +1,11 @@
 from django.urls import path
-from .views import Posts, posts_detail
+from .views import genericApiView
 
 
 urlpatterns = [
-    path('posts/', Posts),
-    path('postsdetails/<int:pk>/', posts_detail),
+    # path('posts/', Posts),
+    # path('postsdetails/<int:pk>/', posts_detail),
+    path('genericApiView/<int:id>/', genericApiView.as_view()),
+  
+    
 ]
