@@ -23,8 +23,8 @@ mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin, mixi
         else:
             return self.list(request)
     
-    def post (self, request):
-        return self.create(request)
+    def post (self, request,id):
+        return self.create(request,id)
     
     def put (self, request, id=None):
         return self.update(request, id)
