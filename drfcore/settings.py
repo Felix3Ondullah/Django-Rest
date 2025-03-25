@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My apps
     'rest_api',
+       'jazzmin',
+       
     # Third-party apps
     'rest_framework',
     'rest_framework.authtoken',
@@ -89,3 +91,7 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+

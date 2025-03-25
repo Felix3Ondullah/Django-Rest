@@ -1,17 +1,20 @@
 from django.urls import path, include
-from .views import  PostViewSets
 from rest_framework import routers
+from .views import (
+    PostViewSet, CustomerViewSet, ProductViewSet, OrderViewSet, 
+    CategoryViewSet, ReviewViewSet, PaymentViewSet
+)
 
+# Use SimpleRouter to register all API endpoints
 router = routers.SimpleRouter()
-
-router.register('posts',PostViewSets, basename= 'posts')
+router.register('posts', PostViewSet, basename='posts')
+router.register('customers', CustomerViewSet, basename='customers')
+router.register('products', ProductViewSet, basename='products')
+router.register('orders', OrderViewSet, basename='orders')
+router.register('categories', CategoryViewSet, basename='categories')
+router.register('reviews', ReviewViewSet, basename='reviews')
+router.register('payments', PaymentViewSet, basename='payments')
 
 urlpatterns = [
-    # path('posts/', Posts),
-    # path('postsdetails/<int:pk>/', posts_detail),
-    # path('genericApiView/<int:id>/', genericApiView.as_view()),
-    # path('genericApiView/', genericApiView.as_view()),
-    path('', include (router.urls)),
-  
-    
+    path('', include(router.urls)),  # Include all API routes
 ]
