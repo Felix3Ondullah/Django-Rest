@@ -108,40 +108,36 @@ JAZZMIN_SETTINGS = {
     "site_header": "Book Store",
     "site_brand": "Book Store",
     "welcome_sign": "Welcome to Book Store Dashboard",
-    "site_logo": "rest_api/images/logo.jpg",
+    "site_logo": "rest_api/images/logo.jpg",  # Place logo inside static/rest_api/images/
     "login_logo": "rest_api/images/logo.jpg",
     "copyright": "© 2025 Django-Rest",
-    "search_model": "rest_api.Customer",
+    "search_model": "rest_api.Customer",  # Change 'MyModel' to any model in rest_api
 
     # Theme Settings
-    "theme": "pulse",  # Try minty, superhero, or a different Bootstrap theme
+    "theme": "pulse",  # Options: flatly, minty, pulse, superhero, etc.
 
     # Custom CSS & JS
     "custom_css": "css/custom_admin.css",
     "custom_js": "js/custom_admin.js",
 
+    # Top Menu Links
+    "topmenu_links": [
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"app": "rest_api"},
+    ],
+
     # Sidebar Customization
     "side_menu": [
         {"app": "rest_api", "name": "REST API Management", "models": [
-            "rest_api.Customer",
+            "rest_api.Customer",  # Replace with actual model names
             "rest_api.Post",
-            "rest_api.Product",
-            "rest_api.Order",
-            "rest_api.Category",
-            "rest_api.Review",
-            "rest_api.Payment",
         ]},
     ],
 
-    # Assigning icons to models
+    # Icons for models
     "icons": {
-        "rest_api.Customer": "fas fa-user",  # Customer icon
-        "rest_api.Post": "fas fa-file-alt",  # Blog post icon
-        "rest_api.Product": "fas fa-box",  # Product icon
-        "rest_api.Order": "fas fa-shopping-cart",  # Order icon
-        "rest_api.Category": "fas fa-tags",  # Category icon
-        "rest_api.Review": "fas fa-star",  # Review icon
-        "rest_api.Payment": "fas fa-credit-card",  # Payment icon
+        "rest_api.Customer": "fas fa-database",  # Use FontAwesome icons
+        "rest_api.Post": "fas fa-cogs",
         "auth.user": "fas fa-user",
     },
 }

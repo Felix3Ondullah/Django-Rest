@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f9fa;
+    background-color: #437eb9;
 }
 .brand-link img {
     max-height: 50px;
@@ -17,3 +17,28 @@ body {
     height: auto;     /* Maintain aspect ratio */
 }
 
+/* Make sidebar text smaller */
+.nav-sidebar .nav-link {
+    font-size: 14px !important;  /* Adjust size */
+    padding: 8px 10px !important; /* Reduce padding */
+    color: white !important;
+    text-transform: capitalize;
+}
+
+/* Add thin visible lines instead of rectangles */
+.nav-sidebar .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin white lines */
+}
+
+/* Remove background colors from buttons */
+.nav-sidebar .nav-link {
+    background: none !important;
+    border-radius: 0 !important;
+}
+
+/* Hover effect: animate text color & underline */
+.nav-sidebar .nav-link:hover {
+    color: blue !important; /* Gold hover effect */
+    border-bottom: 2px solid blue !important; /* Animated underline */
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+}
