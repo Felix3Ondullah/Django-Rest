@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Custom Admin | My Django App{% endblock %}
+
+{% block extrastyle %}
+<!-- Add Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    /* Custom Tailwind Styles */
+    body {
+        @apply bg-gray-100;
+    }
+    .navbar-brand {
+        @apply text-xl font-bold text-blue-500;
+    }
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 class="text-center text-3xl font-bold text-blue-600 mt-3">My Custom Django Admin</h1>
+{% endblock %}
