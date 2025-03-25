@@ -11,7 +11,11 @@ SECRET_KEY = "your-secret-key-here"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '2715-105-163-0-255.ngrok-free.app']
+
+CSRF_TRUSTED_ORIGINS = ['https://2715-105-163-0-255.ngrok-free.app']
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -23,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My apps
     'rest_api',
+    'mpesa',
     # Third-party apps
     'rest_framework',
     'rest_framework.authtoken',
@@ -60,15 +65,16 @@ WSGI_APPLICATION = 'drfcore.wsgi.application'
 
 # Database
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "estdb",
-        "USER": "estf",
-        "PASSWORD": "password10q",
-        "HOST": "localhost",
-        "PORT": "5432",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kimutaidb',  
+        'USER': 'kimutai',  
+        'PASSWORD': 'kimutai',  
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',  
     }
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -89,3 +95,12 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+from decouple import config
+
+MPESA_CONSUMER_KEY = config("MPESA_CONSUMER_KEY")
+MPESA_CONSUMER_SECRET = config("MPESA_CONSUMER_SECRET")
+MPESA_SHORTCODE = config("MPESA_SHORTCODE")
+MPESA_PASSKEY = config("MPESA_PASSKEY", default="")  # If passkey is "N/A", use default=""
+CALLBACK_URL = config("CALLBACK_URL")
