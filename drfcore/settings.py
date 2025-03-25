@@ -21,6 +21,7 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
+ 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,8 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My apps
     'rest_api',
-       'jazzmin',
-  "widget_tweaks",    # Tailwind CSS integration
+    
+
        
        
     # Third-party apps
@@ -102,35 +103,53 @@ USE_TZ = True
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 JAZZMIN_SETTINGS = {
-    "site_title": "My Custom Admin",
-    "site_header": "My Dashboard",
-    "welcome_sign": "Welcome to My Admin Panel",
-    "show_ui_builder": True,  # Enables UI customizer
+    "site_title": "Book Store",
+    "site_header": "Book Store",
+    "site_brand": "Book Store",
+    "welcome_sign": "Welcome to Book Store Dashboard",
+    "site_logo": "rest_api/images/logo.jpg",
+    "login_logo": "rest_api/images/logo.jpg",
+    "copyright": "© 2025 Django-Rest",
+    "search_model": "rest_api.Customer",
 
-    # **Theme Customization**
-    "theme": "litera",  # Try other Bootstrap themes like 'darkly', 'lux', 'materia', etc.
-    "site_logo": "static/images/logo.png",  # Add your logo
-    "site_icon": "static/images/favicon.ico",  # Favicon
-    "login_logo": "static/images/login-logo.png",
-    
-    # **Top Menu Customization**
-    "topmenu_links": [
-        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"model": "auth.User"},
-        {"model": "rest_api.Customer"},
+    # Theme Settings
+    "theme": "pulse",  # Try minty, superhero, or a different Bootstrap theme
+
+    # Custom CSS & JS
+    "custom_css": "css/custom_admin.css",
+    "custom_js": "js/custom_admin.js",
+
+    # Sidebar Customization
+    "side_menu": [
+        {"app": "rest_api", "name": "REST API Management", "models": [
+            "rest_api.Customer",
+            "rest_api.Post",
+            "rest_api.Product",
+            "rest_api.Order",
+            "rest_api.Category",
+            "rest_api.Review",
+            "rest_api.Payment",
+        ]},
     ],
 
-    # **Side Menu Customization**
-    "usermenu_links": [
-        {"name": "Support", "url": "https://support.example.com", "new_window": True},
-        {"model": "auth.user"},
-    ],
-
-    # **Custom Footer**
-    "copyright": "© 2025 My Company",
+    # Assigning icons to models
+    "icons": {
+        "rest_api.Customer": "fas fa-user",  # Customer icon
+        "rest_api.Post": "fas fa-file-alt",  # Blog post icon
+        "rest_api.Product": "fas fa-box",  # Product icon
+        "rest_api.Order": "fas fa-shopping-cart",  # Order icon
+        "rest_api.Category": "fas fa-tags",  # Category icon
+        "rest_api.Review": "fas fa-star",  # Review icon
+        "rest_api.Payment": "fas fa-credit-card",  # Payment icon
+        "auth.user": "fas fa-user",
+    },
 }
 
+JAZZMIN_SETTINGS["custom_css"] = "css/custom_admin.css"
+JAZZMIN_SETTINGS["login_logo"] = "rest_api/images/logo.jpg"
+JAZZMIN_SETTINGS["login_background"] = "rest_api/images/logo.png"
+JAZZMIN_SETTINGS["custom_js"] = "js/custom_admin.js"
+# JAZZMIN_SETTINGS["site_logo"] = "rest_api/images/logo.png"
 
 
