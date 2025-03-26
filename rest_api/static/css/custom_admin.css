@@ -1,0 +1,124 @@
+/* Set light background color */
+body {
+    background-color: #437eb9 !important; /* Blue */
+    border-bottom: 2px solid #2a5d97; /* Slightly darker blue border */
+}
+
+/* Reduce the size of the site logo in the admin panel */
+.brand-link img {
+    max-height: 50px;  /* Adjust height */
+    width: auto;       /* Maintain aspect ratio */
+}
+
+/* Reduce the size of the login page logo */
+.login-logo img {
+    max-width: 200px; /* Adjust width */
+    height: auto;     /* Maintain aspect ratio */
+}
+
+/* Make sidebar text smaller */
+.nav-sidebar .nav-link {
+    font-size: 14px !important;  /* Adjust size */
+    padding: 8px 10px !important; /* Reduce padding */
+    color: white !important;
+    text-transform: capitalize;
+}
+
+/* Add thin visible lines instead of rectangles */
+.nav-sidebar .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin white lines */
+}
+
+/* Remove background colors from buttons */
+.nav-sidebar .nav-link {
+    background: none !important;
+    border-radius: 0 !important;
+}
+
+/* Hover effect: animate text color & underline */
+.nav-sidebar .nav-link:hover {
+    color: blue !important; /* Blue hover effect */
+    border-bottom: 2px solid blue !important; /* Animated underline */
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+
+
+/* Set the background color of the top menu */
+.navbar {
+    background-color: #437eb9 !important; /* Blue */
+    border-bottom: 2px solid #2a5d97; /* Slightly darker blue border */
+}
+
+/* Change the text color of top menu items */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 14px !important; /* Smaller font */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+/* Hover effect for top menu */
+.navbar-nav .nav-link:hover {
+    color: #070707 !important; /* Gold on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Style the dropdown menu in the top menu */
+.navbar-nav .dropdown-menu {
+    background-color: #2a5d97 !important; /* Dark blue */
+    border: none;
+}
+
+/* Change dropdown menu item colors */
+.navbar-nav .dropdown-item {
+    color: white !important;
+    font-size: 13px !important;
+}
+
+/* Hover effect for dropdown menu items */
+.navbar-nav .dropdown-item:hover {
+    background-color: #ffcc00 !important; /* Gold */
+    color: black !important;
+}
+
+/* Reduce the size of the site logo in the admin panel */
+.brand-link img {
+    max-height: 50px;  /* Adjust height */
+    width: auto;       /* Maintain aspect ratio */
+}
+
+/* Reduce the size of the login page logo */
+.login-logo img {
+    max-width: 200px; /* Adjust width */
+    height: auto;     /* Maintain aspect ratio */
+}
+
+/* Make sidebar text smaller */
+.nav-sidebar .nav-link {
+    font-size: 14px !important;
+    padding: 8px 10px !important;
+    color: white !important;
+    text-transform: capitalize;
+}
+
+/* Add thin visible lines instead of rectangles */
+.nav-sidebar .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Remove background colors from sidebar buttons */
+.nav-sidebar .nav-link {
+    background: none !important;
+    border-radius: 0 !important;
+}
+
+/* Hover effect: animate text color & underline */
+.nav-sidebar .nav-link:hover {
+    color: blue !important;
+    border-bottom: 2px solid blue !important;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
